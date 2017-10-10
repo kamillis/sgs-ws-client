@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.dist.js",
   "scripts": {
-    "start": "node server.dist.js",
-    "watch": "nodemon server.dist.js",
+    "start": "nvm use && node server.dist.js",
+    "watch": "nvm use && nodemon server.dist.js",
     "dist": "webpack --config webpack/production",
     "webpack": "webpack -d --watch --config webpack/development",
     "test": "echo \"Error: no test specified\" && exit 1"
