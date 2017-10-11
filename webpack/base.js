@@ -6,7 +6,7 @@ module.exports = {
   target: 'node',
   externals: [nodeExternals()],
   context: rootPath,
-  entry: './server.js',
+  entry: ['babel-polyfill', './server.js'],
   devtool: 'inline-sourcemap',
   module: {
     rules: [
