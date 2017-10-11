@@ -6,9 +6,21 @@ const global = {
 const config = {
   production: Object.assign({
     SERVER_URL: 'ws://localhost:5000',
+    STATS_DATABASE: {
+      host: '192.168.60.75',
+      user: 'sgsmonitor',
+      password: 'monitor1234',
+      database: 'sgsmonitor',
+    },
   }, global),
   development: Object.assign({
     SERVER_URL: 'ws://localhost:5000',
+    STATS_DATABASE: {
+      host: '192.168.60.75',
+      user: 'sgsmonitor',
+      password: 'monitor1234',
+      database: 'sgsmonitor',
+    },
   }, global),
 };
 
