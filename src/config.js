@@ -8,7 +8,7 @@ const global = {
 
 const config = {
   production: Object.assign({
-    SERVER_URL: 'ws://localhost:5000',
+    SERVER_URL: 'sgs-monitor.herokuapp.com',
     STATS_DATABASE: {
       host: '192.168.60.75',
       user: 'sgsmonitor',
