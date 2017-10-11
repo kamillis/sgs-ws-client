@@ -40,7 +40,7 @@ const server = new Koa();
 
   setInterval(async () => {
     await getServerInfo(socket);
-    await getPlayersStats(socket);
+    // await getPlayersStats(socket);
   }, 5000);
 })();
 
