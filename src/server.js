@@ -9,12 +9,25 @@ import config from './config';
 const server = new Koa();
 
 (async () => {
+  let gameData;
+
+  /* eslint-disable */
+  while (true) {
+    try {
+      gameData = await queryGameServer();
+      break;
+    } catch (err) {
+      await sleep(2000);
+    }
+  }
+  /* eslint-enable */
+
   const {
     name,
     map,
     raw: { game },
     query: { host, port },
-  } = await queryGameServer();
+  } = gameData;
 
   const handshakeData = qs.stringify({
     serverId: config.serverId,
@@ -40,8 +53,8 @@ const server = new Koa();
 
   setInterval(async () => {
     await getServerInfo(socket);
-    // await getPlayersStats(socket);
-  }, 5000);
+    await getPlayersStats(socket);
+  }, 10000);
 })();
 
 export default server;
