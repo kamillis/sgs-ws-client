@@ -8,6 +8,10 @@ import config from './config';
 
 const server = new Koa();
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 (async () => {
   let gameData;
 
