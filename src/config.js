@@ -1,4 +1,7 @@
+import uuid from 'uuid/v4';
+
 const global = {
+  serverId: uuid(),
   GAME_TYPE: process.env.GAME_TYPE || 'cs16',
   GAME_HOST: process.env.GAME_HOST || '192.168.60.75',
 };
