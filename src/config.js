@@ -10,7 +10,7 @@ const config = {
   production: Object.assign({
     SERVER_URL: 'sgs-monitor.herokuapp.com',
     STATS_DATABASE: {
-      host: '192.168.60.75',
+      host: 'localhost',
       user: 'sgsmonitor',
       password: 'monitor1234',
       database: 'sgsmonitor',
