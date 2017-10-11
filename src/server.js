@@ -12,7 +12,7 @@ const server = new Koa();
   const {
     name,
     map,
-    game,
+    raw: { game },
     query: { host, port },
   } = await queryGameServer();
 
